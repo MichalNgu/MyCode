@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(158, 240, 158);
+}
+
+h1 {
+    color: rgba(28, 240, 0, 0.8);
+    text-decoration: underline;
+    text-align: center;
+}
+/*or*/
+p {
+    color: rgb(178, 15, 228);
+    text-align: justify;
+    
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 30px 20px 10px #DB1F29;
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
