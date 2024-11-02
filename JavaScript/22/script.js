@@ -1,28 +1,25 @@
-let array = []
+const age = prompt("kolik ti je let?: ")
+let notification 
 
-let myForm = document.querySelector("#testForm")
+/*
+if (age >= 18) {
+    notification = "můžeš vstoupit"
+} else {
+    notification = "nemůžeš vstoupit"
+}
+*/
 
-myForm.addEventListener("submit", function(i){
-    i.preventDefault()
-    array.push(i.target.elements.name.value)
-    arrayToLS = JSON.stringify(array)
-    localStorage.setItem("users", arrayToLS)
-    i.target.elements.name.value = ""
+// nebo
 
-    let myLS = localStorage.getItem("users")
-    let myLSj = JSON.parse(myLS)
+notification = age >= 18 ? "můžeš vstoupit" : "nemůžeš vstoupit"
 
-    let para = document.createElement("p")
-    para.textContent = myLSj[myLSj.length - 1]
-    document.querySelector("#output").appendChild(para)
-    
-})
+//console.log(notification)
 
-let myPresentArray = localStorage.getItem("users")
-let myPresentArrayj = JSON.parse(myPresentArray)
+// nebo
 
-myPresentArrayj.forEach(function(oneUser){
-    let para = document.createElement("p")
-    para.textContent = oneUser
-    document.querySelector("#output").appendChild(para)
-})
+const alow = () => "můžete vstoupit"
+const disallow = () => "nemůžete vstoupit"
+
+const result = age >= 18 ? alow() : disallow()
+
+console.log(result)
